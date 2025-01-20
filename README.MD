@@ -22,25 +22,33 @@ Al Dockerfile hi ha d'haver:
 - Implementar algun exemple de scikit de ML que faci servir moltes dates i que trigui molt a entrenar
 
 ### Entry point
+
 Dos scripts: fit i predict. Tot dins d'un entry point: demo
 - demo train
 - demo predict
 
+````
 [tool.poetry.scripts]
-demo="demo.app:main"
+demo="demo.__main__:_main"
+````
 
 You will need to execute the following commands
 
+```
 poetry run demo train
 poetry run demo predict
+```
 
 To be able to execute the commands without typing "poetry run" you must access the virtual environment created by poetry. You can get the env path entering the following command:
 
+````
 poetry env activate
+````
 
 Once in the poetry environment you can use the entry points. An to get out of the environment just type the following command.
-
+````
 deactivate
+````
 
 ## Step 2
 
@@ -48,11 +56,15 @@ deactivate
 - Semblant al del .devcontainer
 - En aquest sí que farem un poetry install de tots els paquets
 - Docker build d'aquest Dockerfile
+````
     docker build -f Dockerfile -t demoimage .
+````
 - Crear container i executar exemple
+````
     docker run -it --rm demoimage bash
     docker run -it --rm demoimage demo train
     docker run -it --rm demoimage demo predict
+````
 
 ## Step 3
 
