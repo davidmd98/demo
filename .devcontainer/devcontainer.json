@@ -1,0 +1,27 @@
+{
+    "name": "scratch-project",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": "..",
+		"args": {}
+	},
+
+	"containerUser": "root",
+
+	"extensions": [
+		"ms-python.python",
+		"njpwerner.autodocstring",
+		"hediet.vscode-drawio",
+		"docsmsft.docs-markdown",
+		"streetsidesoftware.code-spell-checker",
+		"ms-toolsai.jupyter",
+		"ms-toolsai.jupyter-renderers",
+		"shuworks.vscode-table-formatter",
+		"redhat.vscode-yaml",
+		"trond-snekvik.simple-rst",
+		"bierner.markdown-mermaid",
+		"42crunch.vscode-openapi"
+	],
+
+	"onCreateCommand": "poetry install"
+}

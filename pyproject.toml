@@ -1,0 +1,21 @@
+[tool.poetry]
+name="demo"
+version="0.0.0"
+description="Set up a project from scratch"
+authors=["David Martinez <davidmd98@gmail.com>"]
+license="MIT"
+readme="README.MD"
+packages=[{include="demo"}]
+
+[tool.poetry.dependencies]
+python="3.13.1"
+pandas="2.2.3"
+scikit-learn="1.6.1"
+click="8.1.8"
+
+[tool.poetry.group.dev.dependencies]
+ruff="0.9.1"
+
+[tool.poetry.scripts]
+demo="demo.__main__:_main"
+stress="demo.app:main_stress"
